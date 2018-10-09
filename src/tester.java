@@ -8,11 +8,8 @@ public class tester {
         }
         Shape.printShape(shape);
         for (Shape x : shape) {
-            if (x.getClass() == Square.class) {
-                ((Square)x).howToColor();
-            }
-            if (x.getClass() == Circle.class) {
-                ((Circle)x).howToColor();
+            if (x instanceof Colorable) {
+                ((Colorable) x).howToColor();
             }
         }
 
